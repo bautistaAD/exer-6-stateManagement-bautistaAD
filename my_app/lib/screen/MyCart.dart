@@ -16,7 +16,9 @@ class MyCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('My Cart')),
+      appBar: AppBar( 
+        title: const Text("My Cart", style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.purple),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

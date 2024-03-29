@@ -20,7 +20,10 @@ class _MyCatalogState extends State<MyCatalog> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("My Catalog")),
+      appBar: AppBar(
+        title: const Text("My Catalog", style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.purple,
+      ),
       body: ListView.builder(
         itemCount: productsCatalog.length,
         itemBuilder: (BuildContext context, int index) {
