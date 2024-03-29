@@ -72,28 +72,7 @@ class _MyCheckoutState extends State<MyCheckout> {
                       itemBuilder: (BuildContext context, int index) {
                         return ListTile(
                           title: Text(products[index].name),
-                          trailing: IconButton(
-                            icon: const Icon(Icons.delete),
-                            onPressed: () {
-                              productName = products[index].name;
-                              context.read<ShoppingCart>().removeItem(productName);
-                              if (products.isNotEmpty) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text("$productName removed!"),
-                                    duration: const Duration(seconds: 1, milliseconds: 100),
-                                  ),
-                                );
-                              } else {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content: Text("Cart Empty!"),
-                                    duration: Duration(seconds: 1, milliseconds: 100),
-                                  ),
-                                );
-                              }
-                            },
-                          ),
+                          trailing: Text((products[index].price).toString()),
                         );
                       },
                     ),
